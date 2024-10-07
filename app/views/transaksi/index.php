@@ -40,7 +40,7 @@
                                         <td>Rp <?= number_format(htmlspecialchars($transaksi['total_harga']), 0, ',', '.'); ?></td>
                                         <td class="text-center">
                                             <a href="<?= BASEURL; ?>/transaksi/ubah/<?= $transaksi['id_transaksi']; ?>"
-                                                class="btn btn-success btn-sm text-white tombolUbahTransaksi  "
+                                                class="btn btn-success btn-sm text-white tombolUbahTransaksi "
                                                 data-toggle="modal" data-target="#formModal"
                                                 data-id="<?= $transaksi['id_transaksi']; ?>">
                                                 <i class="fas fa-edit"></i> Ubah
@@ -79,7 +79,7 @@
                                 </li>
                             <?php endfor; ?>
 
-                            <?php if ($data['currentPage'] < $data['totalPages']): ?>
+                            <?php if ($data['currentPages'] < $data['totalPage']): ?>
                                 <li class="page-item">
                                     <a class="page-link" href="<?= BASEURL; ?>/transaksi/index/<?= $data['currentPage'] + 1; ?>" aria-label="Next" style="border-radius: 0.25rem;">
                                         <span aria-hidden="true">&raquo;</span>

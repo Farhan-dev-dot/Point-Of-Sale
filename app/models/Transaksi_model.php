@@ -20,7 +20,7 @@ class Transaksi_model
 
     // Get transaction by ID
     public function getTransaksiById($id)
-    {
+    {   
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id_transaksi = :id_transaksi');
         $this->db->bind('id_transaksi', $id);
         return $this->db->single();
